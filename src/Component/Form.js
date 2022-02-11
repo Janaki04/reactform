@@ -1,6 +1,6 @@
-import React from "react";
+import React,{Component} from "react";
 
-class Form extends React.Component {
+class Form extends Component {
   constructor() {
     super();
     this.state = {
@@ -14,12 +14,12 @@ class Form extends React.Component {
   };
   manageSubmission = (e) => {
     e.preventDefault();
-    const obj = {
+    const temobj = {
       name: this.state.name,
       contact: this.state.contact,
     };
     const tempArr = this.state.users;
-    tempArr.push(obj);
+    tempArr.push(temobj);
     this.setState({ users: tempArr });
   };
   render() {
